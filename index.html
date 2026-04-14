@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomedicina - Simulado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Biomedicina 🔬</h1>
+    <p>Estudos da Duda</p>
+</header>
+
+<div class="container">
+    <div id="menu-screen" class="screen active">
+        <h2>Selecione o Módulo de Estudo:</h2>
+        <div class="modules-grid" id="modules-container">
+        </div>
+    </div>
+
+    <div id="study-screen" class="screen">
+        <button class="back-btn" onclick="goHome()">⬅ Voltar ao Menu</button>
+        <h2 id="topic-title"></h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('resumo')">Resumo</button>
+            <button class="tab-btn" onclick="showTab('dissertativas')">Dissertativas</button>
+            <button class="tab-btn" onclick="showTab('casos')">Casos Clínicos</button>
+            <button class="tab-btn" onclick="showTab('objetivas')">Objetivas</button>
+            <button class="tab-btn" style="background-color: #ffd700; color: #000;" onclick="showTab('lab')">Lab Virtual 🧪</button>
+        </div>
+
+        <div id="tab-resumo" class="tab-content active">
+            <div id="resumo-text" class="card-content"></div>
+        </div>
+
+        <div id="tab-dissertativas" class="tab-content">
+            <div id="dissertativas-container"></div>
+        </div>
+
+        <div id="tab-casos" class="tab-content">
+            <div id="casos-container"></div>
+        </div>
+
+        <div id="tab-objetivas" class="tab-content">
+            <div id="objetivas-container"></div>
+            <div id="objetivas-actions" style="text-align: center; margin-top: 20px;"></div>
+        </div>
+
+        <div id="tab-lab" class="tab-content">
+            <div id="lab-container" class="card-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
